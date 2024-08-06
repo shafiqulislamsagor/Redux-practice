@@ -1,17 +1,14 @@
-import { useState } from "react"
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Count from "./Count";
 
-export default function Counter() {
-    const [count , setCount] = useState(0);
+interface CounterProps{
+    count:number;
+    handleIncrement: () => void;
+    handleDecrement: () => void; 
+}
 
-    const handleIncrement = ()=> {
-        setCount((prevCount) => prevCount + 1);
-    };
-
-    const handleDecrement = () =>{
-        setCount((prevCount) => prevCount - 1);
-    }
+export default function Counter({count , handleIncrement , handleDecrement}:CounterProps) {
+ 
   return (
     <div className="p-4 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow">
         <Count count={count}/>

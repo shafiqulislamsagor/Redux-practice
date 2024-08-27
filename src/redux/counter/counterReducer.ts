@@ -19,7 +19,7 @@ export interface DecrementAction {
 type CounterActionTypes = IncrementAction | DecrementAction;
 
 const initialState: CounterState = {
-  value: 0,
+  value: 5,
 };
 
 const counterReducer = (

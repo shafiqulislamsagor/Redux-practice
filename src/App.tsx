@@ -1,4 +1,5 @@
-import Counter from "./components/counter/Count";
+// import HooksCounter from './components/counter/HookCounter';
+import CounterComponent from './components/counter/Count';
 
 export default function App() {
   return (
@@ -8,7 +9,8 @@ export default function App() {
     </h1>
 
     <div className="max-w-md mx-auto mt-10 space-y-5">
-        <Counter id={2} />
+        {/* <HooksCounter id={2}/> */}
+        <CounterComponent/>
     </div>
 </div></div>
   )
